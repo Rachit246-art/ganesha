@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Mangal Murtis - Eco-Friendly Ganesha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="images/logo.png" alt="Div Mangal Murtis Logo" class="logo-image">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg');">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <h2>Handcrafted Devotion</h2>
+                    <p>Traditional artistry and pure clay, molded with love and faith.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg');">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <h2>Eco-Friendly Ganesha</h2>
+                    <p>Celebrate with nature. Bring home our beautifully crafted, eco-friendly idols.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg');">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <h2>Auspicious Beginnings</h2>
+                    <p>Invite prosperity, wisdom, and joy into your home this festival.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+
+        <!-- Decorative petals -->
+        <div class="petal petal-1"></div>
+        <div class="petal petal-2"></div>
+        <div class="petal petal-3"></div>
+        <div class="petal petal-4"></div>
+        <div class="petal petal-5"></div>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title">In The Spotlight</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <a href="vighnaharta.html" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra 50% OFF</span>
+                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg" alt="Ganesha Idol 1" class="product-image">
+                    </div>
+                    <h3 class="product-title">100% Eco Clay Vighnaharta</h3>
+                    <div class="price-row">
+                        <span class="current-price">₹1,499</span>
+                        <span class="original-price">₹2,999</span>
+                    </div>
+                    <p class="discount-text">50% OFF</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='vighnaharta.html'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>
+            <!-- Product 2 -->
+            <a href="mangalmurti.html" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra 50% OFF</span>
+                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg" alt="Ganesha Idol 2" class="product-image">
+                    </div>
+                    <h3 class="product-title">Mangalmurti Ganesha Idol</h3>
+                    <div class="price-row">
+                        <span class="current-price">₹1,299</span>
+                        <span class="original-price">₹2,599</span>
+                    </div>
+                    <p class="discount-text">50% OFF</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='mangalmurti.html'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>
+            <!-- Product 3 -->
+            <a href="lambodara.html" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra 50% OFF</span>
+                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg" alt="Ganesha Idol 3" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lambodara Majestic Form</h3>
+                    <div class="price-row">
+                        <span class="current-price">₹1,899</span>
+                        <span class="original-price">₹3,799</span>
+                    </div>
+                    <p class="discount-text">50% OFF</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='lambodara.html'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>
+            <!-- Product 4 -->
+            <a href="gajanana.html" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra 50% OFF</span>
+                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg" alt="Ganesha Idol 4" class="product-image">
+                    </div>
+                    <h3 class="product-title">Gajanana Traditional</h3>
+                    <div class="price-row">
+                        <span class="current-price">₹1,599</span>
+                        <span class="original-price">₹3,199</span>
+                    </div>
+                    <p class="discount-text">50% OFF</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='gajanana.html'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>
+            <!-- Product 5 -->
+            <a href="siddhivinayak.html" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra 50% OFF</span>
+                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg" alt="Ganesha Idol 5" class="product-image">
+                    </div>
+                    <h3 class="product-title">Siddhivinayak Pure Clay</h3>
+                    <div class="price-row">
+                        <span class="current-price">₹2,199</span>
+                        <span class="original-price">₹4,399</span>
+                    </div>
+                    <p class="discount-text">50% OFF</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='siddhivinayak.html'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>
+            <!-- Product 6 -->
+            <a href="ekadanta.html" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra 50% OFF</span>
+                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg" alt="Ganesha Idol 6" class="product-image">
+                    </div>
+                    <h3 class="product-title">Ekadanta Elegant Posture</h3>
+                    <div class="price-row">
+                        <span class="current-price">₹1,399</span>
+                        <span class="original-price">₹2,799</span>
+                    </div>
+                    <p class="discount-text">50% OFF</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='ekadanta.html'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>
+        </div>
+        <div class="view-all-container">
+            <button class="view-all-btn">View All</button>
+        </div>
+    </section>
+
+    <!-- Instagram Banner -->
+    <section class="insta-banner">
+        <div class="insta-content">
+            <svg class="insta-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            <h2>Follow us on Instagram</h2>
+            <p>Get exclusive updates and <strong>10% OFF</strong> your first traditional Ganesha idol.</p>
+            <a href="#" class="cta-button insta-btn">Follow @DivMangalMurtis</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <img src="images/logo.png" alt="Div Mangal Murtis" class="footer-logo">
+                <p class="footer-desc">Bringing traditional artistry and eco-friendly devotion directly to your home.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop Idols</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@divmangalmurtis.com</p>
+                <p>📍 Mumbai, Maharashtra, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Div Mangal Murtis. All Rights Reserved. Crafted with devotion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
