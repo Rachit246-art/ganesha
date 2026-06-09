@@ -758,10 +758,12 @@ h1, h2, h3, .cta-button {
     .hero-content {
         padding: 0 1.5rem;
     }
-    /* Hide petals on mobile for a cleaner hero */
-    .petal {
-        display: none;
-    }
+    /* Scale down petals on mobile */
+    .petal-1 { width: 70px; height: 70px; }
+    .petal-2 { width: 90px; height: 90px; }
+    .petal-3 { width: 50px; height: 50px; }
+    .petal-4 { width: 60px; height: 60px; }
+    .petal-5 { width: 55px; height: 55px; }
 
     /* Logo */
     .logo-image {
