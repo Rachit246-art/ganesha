@@ -1,79 +1,913 @@
-// All available product images
-const allImages = [
-    "images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (3).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (3).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (3).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (3).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (3).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (3).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (1).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (2).jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.18 PM.jpeg",
-    "images/WhatsApp Image 2026-06-09 at 5.28.18 PM (1).jpeg"
+// Array of all products with exact data for individual editing
+const products = [
+    {
+        "id": "product_1",
+        "title": "100% Eco Clay Vighnaharta",
+        "price": "₹1,299",
+        "originalPrice": "₹2,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_2",
+        "title": "Mangalmurti Ganesha Idol",
+        "price": "₹1,399",
+        "originalPrice": "₹2,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_3",
+        "title": "Lambodara Majestic Form",
+        "price": "₹1,499",
+        "originalPrice": "₹2,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_4",
+        "title": "Gajanana Traditional",
+        "price": "₹1,599",
+        "originalPrice": "₹3,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_5",
+        "title": "Siddhivinayak Pure Clay",
+        "price": "₹1,699",
+        "originalPrice": "₹3,398",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_6",
+        "title": "Ekadanta Elegant Posture",
+        "price": "₹1,799",
+        "originalPrice": "₹3,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_7",
+        "title": "Mahaganapati Sacred Form",
+        "price": "₹1,899",
+        "originalPrice": "₹3,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_8",
+        "title": "Heramba Divine Idol",
+        "price": "₹1,999",
+        "originalPrice": "₹3,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_9",
+        "title": "Vighneshwara Clay Murti",
+        "price": "₹2,099",
+        "originalPrice": "₹4,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_10",
+        "title": "Dhumravarna Heritage Edition",
+        "price": "₹2,199",
+        "originalPrice": "₹4,398",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_11",
+        "title": "Vakratunda Artistic Form",
+        "price": "₹2,299",
+        "originalPrice": "₹4,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_12",
+        "title": "Sumukhaya Eco Ganesha",
+        "price": "₹2,399",
+        "originalPrice": "₹4,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_13",
+        "title": "100% Eco Clay Vighnaharta - Edition 2",
+        "price": "₹1,349",
+        "originalPrice": "₹2,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_14",
+        "title": "Mangalmurti Ganesha Idol - Edition 2",
+        "price": "₹1,449",
+        "originalPrice": "₹2,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_15",
+        "title": "Lambodara Majestic Form - Edition 2",
+        "price": "₹1,549",
+        "originalPrice": "₹3,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_16",
+        "title": "Gajanana Traditional - Edition 2",
+        "price": "₹1,649",
+        "originalPrice": "₹3,298",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_17",
+        "title": "Siddhivinayak Pure Clay - Edition 2",
+        "price": "₹1,749",
+        "originalPrice": "₹3,498",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_18",
+        "title": "Ekadanta Elegant Posture - Edition 2",
+        "price": "₹1,849",
+        "originalPrice": "₹3,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_19",
+        "title": "Mahaganapati Sacred Form - Edition 2",
+        "price": "₹1,949",
+        "originalPrice": "₹3,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_20",
+        "title": "Heramba Divine Idol - Edition 2",
+        "price": "₹2,049",
+        "originalPrice": "₹4,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_21",
+        "title": "Vighneshwara Clay Murti - Edition 2",
+        "price": "₹2,149",
+        "originalPrice": "₹4,298",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_22",
+        "title": "Dhumravarna Heritage Edition - Edition 2",
+        "price": "₹2,249",
+        "originalPrice": "₹4,498",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_23",
+        "title": "Vakratunda Artistic Form - Edition 2",
+        "price": "₹2,349",
+        "originalPrice": "₹4,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_24",
+        "title": "Sumukhaya Eco Ganesha - Edition 2",
+        "price": "₹2,449",
+        "originalPrice": "₹4,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_25",
+        "title": "100% Eco Clay Vighnaharta - Edition 3",
+        "price": "₹1,399",
+        "originalPrice": "₹2,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_26",
+        "title": "Mangalmurti Ganesha Idol - Edition 3",
+        "price": "₹1,499",
+        "originalPrice": "₹2,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_27",
+        "title": "Lambodara Majestic Form - Edition 3",
+        "price": "₹1,599",
+        "originalPrice": "₹3,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_28",
+        "title": "Gajanana Traditional - Edition 3",
+        "price": "₹1,699",
+        "originalPrice": "₹3,398",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_29",
+        "title": "Siddhivinayak Pure Clay - Edition 3",
+        "price": "₹1,799",
+        "originalPrice": "₹3,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_30",
+        "title": "Ekadanta Elegant Posture - Edition 3",
+        "price": "₹1,899",
+        "originalPrice": "₹3,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_31",
+        "title": "Mahaganapati Sacred Form - Edition 3",
+        "price": "₹1,999",
+        "originalPrice": "₹3,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_32",
+        "title": "Heramba Divine Idol - Edition 3",
+        "price": "₹2,099",
+        "originalPrice": "₹4,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_33",
+        "title": "Vighneshwara Clay Murti - Edition 3",
+        "price": "₹2,199",
+        "originalPrice": "₹4,398",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_34",
+        "title": "Dhumravarna Heritage Edition - Edition 3",
+        "price": "₹2,299",
+        "originalPrice": "₹4,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_35",
+        "title": "Vakratunda Artistic Form - Edition 3",
+        "price": "₹2,399",
+        "originalPrice": "₹4,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_36",
+        "title": "Sumukhaya Eco Ganesha - Edition 3",
+        "price": "₹2,499",
+        "originalPrice": "₹4,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_37",
+        "title": "100% Eco Clay Vighnaharta - Edition 4",
+        "price": "₹1,449",
+        "originalPrice": "₹2,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_38",
+        "title": "Mangalmurti Ganesha Idol - Edition 4",
+        "price": "₹1,549",
+        "originalPrice": "₹3,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_39",
+        "title": "Lambodara Majestic Form - Edition 4",
+        "price": "₹1,649",
+        "originalPrice": "₹3,298",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_40",
+        "title": "Gajanana Traditional - Edition 4",
+        "price": "₹1,749",
+        "originalPrice": "₹3,498",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_41",
+        "title": "Siddhivinayak Pure Clay - Edition 4",
+        "price": "₹1,849",
+        "originalPrice": "₹3,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_42",
+        "title": "Ekadanta Elegant Posture - Edition 4",
+        "price": "₹1,949",
+        "originalPrice": "₹3,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_43",
+        "title": "Mahaganapati Sacred Form - Edition 4",
+        "price": "₹2,049",
+        "originalPrice": "₹4,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_44",
+        "title": "Heramba Divine Idol - Edition 4",
+        "price": "₹2,149",
+        "originalPrice": "₹4,298",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_45",
+        "title": "Vighneshwara Clay Murti - Edition 4",
+        "price": "₹2,249",
+        "originalPrice": "₹4,498",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_46",
+        "title": "Dhumravarna Heritage Edition - Edition 4",
+        "price": "₹2,349",
+        "originalPrice": "₹4,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_47",
+        "title": "Vakratunda Artistic Form - Edition 4",
+        "price": "₹2,449",
+        "originalPrice": "₹4,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_48",
+        "title": "Sumukhaya Eco Ganesha - Edition 4",
+        "price": "₹2,549",
+        "originalPrice": "₹5,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_49",
+        "title": "100% Eco Clay Vighnaharta - Edition 5",
+        "price": "₹1,499",
+        "originalPrice": "₹2,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_50",
+        "title": "Mangalmurti Ganesha Idol - Edition 5",
+        "price": "₹1,599",
+        "originalPrice": "₹3,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_51",
+        "title": "Lambodara Majestic Form - Edition 5",
+        "price": "₹1,699",
+        "originalPrice": "₹3,398",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_52",
+        "title": "Gajanana Traditional - Edition 5",
+        "price": "₹1,799",
+        "originalPrice": "₹3,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_53",
+        "title": "Siddhivinayak Pure Clay - Edition 5",
+        "price": "₹1,899",
+        "originalPrice": "₹3,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_54",
+        "title": "Ekadanta Elegant Posture - Edition 5",
+        "price": "₹1,999",
+        "originalPrice": "₹3,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_55",
+        "title": "Mahaganapati Sacred Form - Edition 5",
+        "price": "₹2,099",
+        "originalPrice": "₹4,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_56",
+        "title": "Heramba Divine Idol - Edition 5",
+        "price": "₹2,199",
+        "originalPrice": "₹4,398",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_57",
+        "title": "Vighneshwara Clay Murti - Edition 5",
+        "price": "₹2,299",
+        "originalPrice": "₹4,598",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_58",
+        "title": "Dhumravarna Heritage Edition - Edition 5",
+        "price": "₹2,399",
+        "originalPrice": "₹4,798",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_59",
+        "title": "Vakratunda Artistic Form - Edition 5",
+        "price": "₹2,499",
+        "originalPrice": "₹4,998",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_60",
+        "title": "Sumukhaya Eco Ganesha - Edition 5",
+        "price": "₹2,599",
+        "originalPrice": "₹5,198",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_61",
+        "title": "100% Eco Clay Vighnaharta - Edition 6",
+        "price": "₹1,549",
+        "originalPrice": "₹3,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_62",
+        "title": "Mangalmurti Ganesha Idol - Edition 6",
+        "price": "₹1,649",
+        "originalPrice": "₹3,298",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_63",
+        "title": "Lambodara Majestic Form - Edition 6",
+        "price": "₹1,749",
+        "originalPrice": "₹3,498",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_64",
+        "title": "Gajanana Traditional - Edition 6",
+        "price": "₹1,849",
+        "originalPrice": "₹3,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_65",
+        "title": "Siddhivinayak Pure Clay - Edition 6",
+        "price": "₹1,949",
+        "originalPrice": "₹3,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (3).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_66",
+        "title": "Ekadanta Elegant Posture - Edition 6",
+        "price": "₹2,049",
+        "originalPrice": "₹4,098",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_67",
+        "title": "Mahaganapati Sacred Form - Edition 6",
+        "price": "₹2,149",
+        "originalPrice": "₹4,298",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_68",
+        "title": "Heramba Divine Idol - Edition 6",
+        "price": "₹2,249",
+        "originalPrice": "₹4,498",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (2).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_69",
+        "title": "Vighneshwara Clay Murti - Edition 6",
+        "price": "₹2,349",
+        "originalPrice": "₹4,698",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM.jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    },
+    {
+        "id": "product_70",
+        "title": "Dhumravarna Heritage Edition - Edition 6",
+        "price": "₹2,449",
+        "originalPrice": "₹4,898",
+        "discount": "50% OFF",
+        "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM (1).jpeg",
+        "videos": [
+            "images/Review/video.mp4",
+            "images/Review/video (1).mp4",
+            "images/Review/video (2).mp4"
+        ]
+    }
 ];
-
-const baseTitles = [
-    "100% Eco Clay Vighnaharta",
-    "Mangalmurti Ganesha Idol",
-    "Lambodara Majestic Form",
-    "Gajanana Traditional",
-    "Siddhivinayak Pure Clay",
-    "Ekadanta Elegant Posture",
-    "Mahaganapati Sacred Form",
-    "Heramba Divine Idol",
-    "Vighneshwara Clay Murti",
-    "Dhumravarna Heritage Edition",
-    "Vakratunda Artistic Form",
-    "Sumukhaya Eco Ganesha"
-];
-
-const products = [];
-
-// Create exactly 70 products — each gets a unique image cycling through all 35 available
-for (let i = 0; i < 70; i++) {
-    const titleIndex = i % baseTitles.length;
-    const edition = Math.floor(i / baseTitles.length) + 1;
-    const isOriginal = i < baseTitles.length;
-
-    const titleSuffix = isOriginal ? "" : ` - Edition ${edition}`;
-
-    const basePrice = 1299 + (i % 12) * 100 + Math.floor(i / 12) * 50;
-    const originalPrice = basePrice * 2;
-
-    // Each product gets a unique image - cycle through all 35 images
-    const imageIndex = i % allImages.length;
-
-    products.push({
-        id: `product_${i + 1}`,
-        title: baseTitles[titleIndex] + titleSuffix,
-        price: `₹${basePrice.toLocaleString('en-IN')}`,
-        originalPrice: `₹${originalPrice.toLocaleString('en-IN')}`,
-        discount: "50% OFF",
-        image: allImages[imageIndex]
-    });
-}

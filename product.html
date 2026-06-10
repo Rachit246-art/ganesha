@@ -219,6 +219,16 @@
 
                 const waMessage = `Hello, I would like to book the ${product.title}.`;
                 document.getElementById('whatsapp-btn').href = `https://wa.me/919876543210?text=${encodeURIComponent(waMessage)}`;
+
+                // Update videos if available
+                if (product.videos && product.videos.length > 0) {
+                    const videoTags = document.querySelectorAll('.review-slide video');
+                    product.videos.forEach((vidSrc, i) => {
+                        if (videoTags[i]) {
+                            videoTags[i].src = vidSrc;
+                        }
+                    });
+                }
             } else {
                 document.getElementById('product-title').innerText = 'Product not found';
             }
