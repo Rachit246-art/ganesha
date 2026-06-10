@@ -18,13 +18,16 @@ function currentSlide(index) {
 }
 
 function nextSlide() {
+    if (slides.length === 0) return;
     let newIndex = currentSlideIndex + 1;
     if (newIndex >= slides.length) newIndex = 0;
     showSlide(newIndex);
 }
 
 // Auto change slide every 5 seconds
-setInterval(nextSlide, 5000);
+if (slides.length > 0) {
+    setInterval(nextSlide, 5000);
+}
 
 // Announcement Bar logic
 const annSlides = document.querySelectorAll('.ann-slide');
