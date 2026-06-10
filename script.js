@@ -25,3 +25,31 @@ function nextSlide() {
 
 // Auto change slide every 5 seconds
 setInterval(nextSlide, 5000);
+
+// Announcement Bar logic
+const annSlides = document.querySelectorAll('.ann-slide');
+if (annSlides.length > 0) {
+    let currentAnnIndex = 0;
+    setInterval(() => {
+        annSlides.forEach(s => s.classList.remove('active'));
+        currentAnnIndex = (currentAnnIndex + 1) % annSlides.length;
+        annSlides[currentAnnIndex].classList.add('active');
+    }, 4000);
+}
+
+// Countdown timer logic
+const timerElements = document.querySelectorAll('.countdown-timer');
+if (timerElements.length > 0) {
+    // Set a random time between 2 and 5 hours
+    let totalSeconds = Math.floor(Math.random() * 10800) + 7200;
+    
+    setInterval(() => {
+        if (totalSeconds > 0) totalSeconds--;
+        const h = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
+        const m = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');
+        const s = (totalSeconds % 60).toString().padStart(2, '0');
+        timerElements.forEach(el => {
+            el.innerHTML = `⏱ ${h}h ${m}m ${s}s`;
+        });
+    }, 1000);
+}

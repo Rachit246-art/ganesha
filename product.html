@@ -8,6 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="ann-slides" id="ann-slides">
+            <div class="ann-slide active ann-pink">
+                <span class="ann-text">Hurry Up, Shop Now! • 50% Off</span>
+                <span class="ann-timer countdown-timer">⏱ Loading...</span>
+            </div>
+            <div class="ann-slide ann-black">
+                <span class="ann-text">Save Min 50% on all orders and get free shipping</span>
+            </div>
+            <div class="ann-slide ann-black">
+                <span class="ann-text">Extra discounts Upto ₹1850 at checkout.</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="logo-container">
@@ -80,7 +96,7 @@
                 <!-- Review 1 -->
                 <div class="review-slide active">
                     <div class="review-video-wrapper">
-                        <video src="images/Review/video.mp4" autoplay playsinline muted loop></video>
+                        <video src="images/Review/video.mp4" autoplay playsinline muted></video>
                     </div>
                     <div class="review-info">
                         <p class="reviewer-name-new">Priya Sharma</p>
@@ -95,7 +111,7 @@
                 <!-- Review 2 -->
                 <div class="review-slide">
                     <div class="review-video-wrapper">
-                        <video src="images/Review/video (1).mp4" autoplay playsinline muted loop></video>
+                        <video src="images/Review/video (1).mp4" autoplay playsinline muted></video>
                     </div>
                     <div class="review-info">
                         <p class="reviewer-name-new">Amit Patel</p>
@@ -110,7 +126,7 @@
                 <!-- Review 3 -->
                 <div class="review-slide">
                     <div class="review-video-wrapper">
-                        <video src="images/Review/video (2).mp4" autoplay playsinline muted loop></video>
+                        <video src="images/Review/video (2).mp4" autoplay playsinline muted></video>
                     </div>
                     <div class="review-info">
                         <p class="reviewer-name-new">Neha Kulkarni</p>
@@ -240,37 +256,57 @@
 
         startCountdown();
 
-        // Review Carousel with Auto-slide
+        // Review Carousel with Auto-slide based on Video Completion
         let currentReview = 0;
         const slides = document.querySelectorAll('.review-slide');
         const dots = document.querySelectorAll('.review-dot');
-        let slideInterval;
 
         function goToReview(index) {
+            // Stop current video
+            const currentVideo = slides[currentReview].querySelector('video');
+            if (currentVideo) {
+                currentVideo.pause();
+                currentVideo.currentTime = 0;
+            }
+
             slides[currentReview].classList.remove('active');
             dots[currentReview].classList.remove('active');
+            
             currentReview = (index + slides.length) % slides.length;
+            
             slides[currentReview].classList.add('active');
             dots[currentReview].classList.add('active');
-            resetInterval();
+
+            // Play new video
+            const newVideo = slides[currentReview].querySelector('video');
+            if (newVideo) {
+                newVideo.currentTime = 0;
+                newVideo.play().catch(e => console.log('Autoplay blocked:', e));
+            }
         }
 
         function changeReview(dir) {
             goToReview(currentReview + dir);
         }
 
-        function autoSlide() {
-            goToReview(currentReview + 1);
-        }
-
-        function resetInterval() {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(autoSlide, 5000); // Auto slide every 5 seconds
-        }
-
-        // Initialize auto-sliding
-        if(slides.length > 0) {
-            resetInterval();
+        // Listen for video end to trigger auto-scroll
+        if (slides.length > 0) {
+            slides.forEach(slide => {
+                const video = slide.querySelector('video');
+                if (video) {
+                    // Remove loop attribute just in case it was missed in HTML
+                    video.removeAttribute('loop');
+                    video.addEventListener('ended', () => {
+                        changeReview(1);
+                    });
+                }
+            });
+            
+            // Ensure first video plays on load
+            const firstVideo = slides[0].querySelector('video');
+            if (firstVideo) {
+                firstVideo.play().catch(e => console.log('Autoplay blocked:', e));
+            }
         }
     </script>
 </body>
