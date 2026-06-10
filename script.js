@@ -1,15 +1,15 @@
 let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
+const heroSlides = document.querySelectorAll('.slide');
+const heroDots = document.querySelectorAll('.dot');
 
 function showSlide(index) {
-    slides.forEach((slide, i) => {
+    heroSlides.forEach((slide, i) => {
         slide.classList.remove('active');
-        dots[i].classList.remove('active');
+        if(heroDots[i]) heroDots[i].classList.remove('active');
     });
     
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
+    if(heroSlides[index]) heroSlides[index].classList.add('active');
+    if(heroDots[index]) heroDots[index].classList.add('active');
     currentSlideIndex = index;
 }
 
@@ -18,14 +18,14 @@ function currentSlide(index) {
 }
 
 function nextSlide() {
-    if (slides.length === 0) return;
+    if (heroSlides.length === 0) return;
     let newIndex = currentSlideIndex + 1;
-    if (newIndex >= slides.length) newIndex = 0;
+    if (newIndex >= heroSlides.length) newIndex = 0;
     showSlide(newIndex);
 }
 
 // Auto change slide every 5 seconds
-if (slides.length > 0) {
+if (heroSlides.length > 0) {
     setInterval(nextSlide, 5000);
 }
 
