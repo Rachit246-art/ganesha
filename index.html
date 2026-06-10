@@ -8,6 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="ann-slides" id="ann-slides">
+            <div class="ann-slide active ann-pink">
+                <span class="ann-text">Hurry Up, Shop Now! • 50% Off</span>
+                <span class="ann-timer countdown-timer">⏱ Loading...</span>
+            </div>
+            <div class="ann-slide ann-black">
+                <span class="ann-text">Save Min 50% on all orders and get free shipping</span>
+            </div>
+            <div class="ann-slide ann-black">
+                <span class="ann-text">Extra discounts Upto ₹1850 at checkout.</span>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
         <div class="logo-container">
             <div class="logo-placeholder">
@@ -19,28 +35,13 @@
     <section class="hero">
         <div class="slider-container">
             <!-- Slide 1 -->
-            <div class="slide active" style="background-image: url('images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg');">
-                <div class="slide-overlay"></div>
-                <div class="hero-content">
-                    <h2>Handcrafted Devotion</h2>
-                    <p>Traditional artistry and pure clay, molded with love and faith.</p>
-                </div>
+            <div class="slide active" style="background-image: url('images/hero section/Banner1.png');">
             </div>
             <!-- Slide 2 -->
-            <div class="slide" style="background-image: url('images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg');">
-                <div class="slide-overlay"></div>
-                <div class="hero-content">
-                    <h2>Eco-Friendly Ganesha</h2>
-                    <p>Celebrate with nature. Bring home our beautifully crafted, eco-friendly idols.</p>
-                </div>
+            <div class="slide" style="background-image: url('images/hero section/banner2.png');">
             </div>
             <!-- Slide 3 -->
-            <div class="slide" style="background-image: url('images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg');">
-                <div class="slide-overlay"></div>
-                <div class="hero-content">
-                    <h2>Auspicious Beginnings</h2>
-                    <p>Invite prosperity, wisdom, and joy into your home this festival.</p>
-                </div>
+            <div class="slide" style="background-image: url('images/hero section/banner 3.png');">
             </div>
         </div>
         
@@ -61,142 +62,8 @@
 
     <section class="products-section">
         <h2 class="section-title">In The Spotlight</h2>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <a href="vighnaharta.html" class="product-card-link">
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <span class="discount-badge">Extra 50% OFF</span>
-                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg" alt="Ganesha Idol 1" class="product-image">
-                    </div>
-                    <h3 class="product-title">100% Eco Clay Vighnaharta</h3>
-                    <div class="price-row">
-                        <span class="current-price">₹1,499</span>
-                        <span class="original-price">₹2,999</span>
-                    </div>
-                    <p class="discount-text">50% OFF</p>
-                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='vighnaharta.html'">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </button>
-                </div>
-            </a>
-            <!-- Product 2 -->
-            <a href="mangalmurti.html" class="product-card-link">
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <span class="discount-badge">Extra 50% OFF</span>
-                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg" alt="Ganesha Idol 2" class="product-image">
-                    </div>
-                    <h3 class="product-title">Mangalmurti Ganesha Idol</h3>
-                    <div class="price-row">
-                        <span class="current-price">₹1,299</span>
-                        <span class="original-price">₹2,599</span>
-                    </div>
-                    <p class="discount-text">50% OFF</p>
-                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='mangalmurti.html'">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </button>
-                </div>
-            </a>
-            <!-- Product 3 -->
-            <a href="lambodara.html" class="product-card-link">
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <span class="discount-badge">Extra 50% OFF</span>
-                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg" alt="Ganesha Idol 3" class="product-image">
-                    </div>
-                    <h3 class="product-title">Lambodara Majestic Form</h3>
-                    <div class="price-row">
-                        <span class="current-price">₹1,899</span>
-                        <span class="original-price">₹3,799</span>
-                    </div>
-                    <p class="discount-text">50% OFF</p>
-                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='lambodara.html'">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </button>
-                </div>
-            </a>
-            <!-- Product 4 -->
-            <a href="gajanana.html" class="product-card-link">
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <span class="discount-badge">Extra 50% OFF</span>
-                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg" alt="Ganesha Idol 4" class="product-image">
-                    </div>
-                    <h3 class="product-title">Gajanana Traditional</h3>
-                    <div class="price-row">
-                        <span class="current-price">₹1,599</span>
-                        <span class="original-price">₹3,199</span>
-                    </div>
-                    <p class="discount-text">50% OFF</p>
-                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='gajanana.html'">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </button>
-                </div>
-            </a>
-            <!-- Product 5 -->
-            <a href="siddhivinayak.html" class="product-card-link">
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <span class="discount-badge">Extra 50% OFF</span>
-                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg" alt="Ganesha Idol 5" class="product-image">
-                    </div>
-                    <h3 class="product-title">Siddhivinayak Pure Clay</h3>
-                    <div class="price-row">
-                        <span class="current-price">₹2,199</span>
-                        <span class="original-price">₹4,399</span>
-                    </div>
-                    <p class="discount-text">50% OFF</p>
-                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='siddhivinayak.html'">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </button>
-                </div>
-            </a>
-            <!-- Product 6 -->
-            <a href="ekadanta.html" class="product-card-link">
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <span class="discount-badge">Extra 50% OFF</span>
-                        <img src="images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg" alt="Ganesha Idol 6" class="product-image">
-                    </div>
-                    <h3 class="product-title">Ekadanta Elegant Posture</h3>
-                    <div class="price-row">
-                        <span class="current-price">₹1,399</span>
-                        <span class="original-price">₹2,799</span>
-                    </div>
-                    <p class="discount-text">50% OFF</p>
-                    <button class="cart-btn" onclick="event.preventDefault(); window.location.href='ekadanta.html'">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </button>
-                </div>
-            </a>
-        </div>
-        <div class="view-all-container">
-            <button class="view-all-btn">View All</button>
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be generated dynamically -->
         </div>
     </section>
 
@@ -240,6 +107,39 @@
         </div>
     </footer>
 
+    <script src="products.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('products-grid');
+            if (grid && typeof products !== 'undefined') {
+                grid.innerHTML = '';
+                products.forEach(product => {
+                    grid.innerHTML += `
+            <a href="product.html?id=${product.id}" class="product-card-link" onclick="localStorage.setItem('currentProductId', '${product.id}')">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="discount-badge">Extra ${product.discount}</span>
+                        <img src="${product.image}" alt="${product.title}" class="product-image">
+                    </div>
+                    <h3 class="product-title">${product.title}</h3>
+                    <div class="price-row">
+                        <span class="current-price">${product.price}</span>
+                        <span class="original-price">${product.originalPrice}</span>
+                    </div>
+                    <p class="discount-text">${product.discount}</p>
+                    <button class="cart-btn" onclick="event.preventDefault(); localStorage.setItem('currentProductId', '${product.id}'); window.location.href='product.html?id=${product.id}'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </a>`;
+                });
+            }
+        });
+    </script>
 </body>
 </html>

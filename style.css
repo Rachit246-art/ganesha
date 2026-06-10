@@ -54,7 +54,7 @@ h1, h2, h3, .cta-button {
 }
 
 .logo-image {
-    max-height: 120px;
+    max-height: 180px;
     width: auto;
     object-fit: contain;
 }
@@ -64,25 +64,21 @@ h1, h2, h3, .cta-button {
 /* Hero Section */
 .hero {
     position: relative;
-    background-color: var(--color-dark);
     text-align: center;
-    overflow: hidden;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 4px solid var(--color-gold);
+    padding: 1.5rem;
+    background-color: transparent;
 }
 
 /* Slider */
 .slider-container {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    aspect-ratio: 21 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .slide {
@@ -145,7 +141,7 @@ h1, h2, h3, .cta-button {
 
 .slider-controls {
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -588,67 +584,159 @@ h1, h2, h3, .cta-button {
     justify-content: center;
 }
 
-.product-info h1 {
-    font-size: 3rem;
+/* New Product Info Layout */
+.product-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 1rem;
+}
+.product-title-row h1 {
+    font-size: 1.8rem;
+    font-family: 'Outfit', sans-serif;
     color: var(--color-dark);
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+.share-btn {
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+.share-btn:hover { background: #e5e5e5; }
+.share-btn svg { width: 18px; height: 18px; stroke: #555; }
+
+.price-row-detail {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.price-row-detail .product-price { 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #000; 
+    font-family: 'Outfit', sans-serif;
+}
+.price-row-detail .original-price { 
+    font-size: 1.2rem; 
+    color: #999; 
+    text-decoration: line-through; 
+    font-family: 'Outfit', sans-serif;
+}
+.price-row-detail .discount-text { 
+    font-size: 1.1rem; 
+    color: #e60000; 
+    font-weight: bold; 
+    font-family: 'Outfit', sans-serif;
 }
 
-.product-price {
-    font-size: 1.5rem;
-    color: var(--color-gold);
+.timer-badge {
+    background: #ffe6e6;
+    color: #e60000;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    font-family: 'Cinzel', serif;
+    font-family: 'Outfit', sans-serif;
 }
 
-.product-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
+.offer-banner {
+    border: 1px dashed #4caf50;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+.offer-banner svg { width: 20px; height: 20px; margin-right: 0.8rem; stroke: #4caf50; }
+.offer-banner .chevron-right { margin-left: auto; stroke: #ccc; }
+
+.tax-info {
+    color: #777;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-bottom: 2rem;
-    color: var(--color-text);
+    font-family: 'Outfit', sans-serif;
+}
+.tax-info svg { width: 16px; height: 16px; stroke: #999; }
+
+.trust-badges {
+    background: #fdfdfd;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid #eee;
+    font-family: 'Outfit', sans-serif;
+}
+.trust-icons-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 1rem;
+}
+.trust-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111;
+}
+.trust-icon {
+    width: 40px; height: 40px; background: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; font-weight: bold; border: 1px solid #eee;
+    color: #333;
+}
+.delivery-time {
+    background: #e9e9e9;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
 }
 
-.product-features {
-    list-style: none;
-    margin-bottom: 2.5rem;
-}
-
-.product-features li {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.product-features li::before {
-    content: '✨';
-    position: absolute;
-    left: 0;
-    color: var(--color-gold);
-    font-size: 1rem;
-}
-
-.whatsapp-btn {
+.whatsapp-btn-large {
     background-color: #25D366; /* WhatsApp Green */
     color: #fff;
     border: none;
-    padding: 1rem 2.5rem;
+    padding: 1.2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: 'Lora', serif;
+    font-family: 'Outfit', sans-serif;
     border-radius: 50px;
     cursor: pointer;
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-    align-self: flex-start;
 }
 
-.whatsapp-btn:hover {
+.whatsapp-btn-large:hover {
     background-color: #1EBE5D;
     transform: translateY(-3px);
     box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
@@ -663,70 +751,148 @@ h1, h2, h3, .cta-button {
 
 /* Customer Feedback Section */
 .feedback-section {
-    padding: 5rem 2rem;
-    max-width: 1200px;
+    padding: 3rem 1.5rem;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
 .feedback-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-dark);
+}
+
+/* Review Carousel */
+.review-carousel {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
     position: relative;
-    display: inline-block;
 }
 
-.feedback-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 20%;
-    right: 20%;
-    height: 2px;
-    background: var(--color-gold);
+.review-slides {
+    position: relative;
+    width: 100%;
 }
 
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.review-slide {
+    display: none;
+    flex-direction: column;
 }
 
-.review-card {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid var(--color-gold-light);
-    padding: 2rem;
-    border-radius: 15px;
+.review-slide.active {
+    display: flex;
+}
+
+.review-video-wrapper {
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    overflow: hidden;
+}
+
+.review-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.review-info {
+    padding: 1.2rem 1.5rem 1rem;
     text-align: left;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
-    position: relative;
-    z-index: 10;
 }
 
-.review-card::before {
-    content: '“';
-    font-family: 'Cinzel', serif;
-    font-size: 5rem;
-    color: var(--color-pastel-pink);
-    position: absolute;
-    top: -20px;
-    left: 10px;
-    line-height: 1;
-    z-index: -1;
+.reviewer-name-new {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    color: #111;
+    margin-bottom: 0.3rem;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .stars {
-    color: var(--color-gold);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+    color: #f5a623;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #999;
+    font-family: 'Outfit', sans-serif;
 }
 
 .review-text {
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    color: var(--color-text);
+    font-size: 0.9rem;
+    color: #555;
     line-height: 1.6;
+    font-style: italic;
+    font-family: 'Lora', serif;
+}
+
+.review-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 1rem;
+    background: #fff;
+}
+
+.review-arrow {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.review-arrow:hover {
+    background: var(--color-gold-light);
+}
+
+.review-dots {
+    display: flex;
+    gap: 0.4rem;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.review-dot.active {
+    background: var(--color-gold);
+    transform: scale(1.3);
 }
 
 .reviewer-name {
@@ -761,7 +927,14 @@ h1, h2, h3, .cta-button {
 @media (max-width: 768px) {
     /* Hero: full screen, centered content */
     .hero {
-        min-height: 55vh;
+        padding: 1rem;
+    }
+    .slider-container {
+        aspect-ratio: 16 / 10;
+        border-radius: 15px;
+    }
+    .petal {
+        display: none;
     }
     .hero-content {
         padding: 0 1.5rem;
@@ -775,7 +948,7 @@ h1, h2, h3, .cta-button {
 
     /* Logo */
     .logo-image {
-        max-height: 70px;
+        max-height: 100px;
     }
     .logo-placeholder {
         padding: 0.5rem 1rem;
