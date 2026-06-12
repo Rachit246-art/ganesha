@@ -6,11 +6,19 @@ const products = [
         "price": "₹1,299",
         "originalPrice": "₹2,598",
         "discount": "50% OFF",
-        "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
+        "image": "images/product1/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
         "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
+            "images/product1/video.mp4",
+            "images/product1/video (1).mp4",
+            "images/product1/video (2).mp4"
+        ],
+        "code": "DMM2601",
+        "images": [
+            "images/product1/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
+            "images/product1/WhatsApp Image 2026-06-09 at 5.28.09 PM (1).jpeg",
+            "images/product1/WhatsApp Image 2026-06-09 at 5.28.09 PM (2).jpeg",
+            "images/product1/WhatsApp Image 2026-06-09 at 5.28.10 PM (1).jpeg",
+            "images/product1/WhatsApp Image 2026-06-09 at 5.28.10 PM (2).jpeg"
         ]
     },
     {
@@ -20,11 +28,8 @@ const products = [
         "originalPrice": "₹2,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2602"
     },
     {
         "id": "product_3",
@@ -33,11 +38,8 @@ const products = [
         "originalPrice": "₹2,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2603"
     },
     {
         "id": "product_4",
@@ -46,11 +48,8 @@ const products = [
         "originalPrice": "₹3,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2604"
     },
     {
         "id": "product_5",
@@ -59,11 +58,8 @@ const products = [
         "originalPrice": "₹3,398",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2605"
     },
     {
         "id": "product_6",
@@ -72,11 +68,8 @@ const products = [
         "originalPrice": "₹3,598",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2606"
     },
     {
         "id": "product_7",
@@ -85,11 +78,8 @@ const products = [
         "originalPrice": "₹3,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2607"
     },
     {
         "id": "product_8",
@@ -98,11 +88,8 @@ const products = [
         "originalPrice": "₹3,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2608"
     },
     {
         "id": "product_9",
@@ -111,11 +98,8 @@ const products = [
         "originalPrice": "₹4,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2609"
     },
     {
         "id": "product_10",
@@ -124,11 +108,8 @@ const products = [
         "originalPrice": "₹4,398",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2610"
     },
     {
         "id": "product_11",
@@ -137,11 +118,8 @@ const products = [
         "originalPrice": "₹4,598",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2611"
     },
     {
         "id": "product_12",
@@ -150,11 +128,8 @@ const products = [
         "originalPrice": "₹4,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2612"
     },
     {
         "id": "product_13",
@@ -163,11 +138,8 @@ const products = [
         "originalPrice": "₹2,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2613"
     },
     {
         "id": "product_14",
@@ -176,11 +148,8 @@ const products = [
         "originalPrice": "₹2,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2614"
     },
     {
         "id": "product_15",
@@ -189,11 +158,8 @@ const products = [
         "originalPrice": "₹3,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2615"
     },
     {
         "id": "product_16",
@@ -202,11 +168,8 @@ const products = [
         "originalPrice": "₹3,298",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2616"
     },
     {
         "id": "product_17",
@@ -215,11 +178,8 @@ const products = [
         "originalPrice": "₹3,498",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2617"
     },
     {
         "id": "product_18",
@@ -228,11 +188,8 @@ const products = [
         "originalPrice": "₹3,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2618"
     },
     {
         "id": "product_19",
@@ -241,11 +198,8 @@ const products = [
         "originalPrice": "₹3,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2619"
     },
     {
         "id": "product_20",
@@ -254,11 +208,8 @@ const products = [
         "originalPrice": "₹4,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2620"
     },
     {
         "id": "product_21",
@@ -267,11 +218,8 @@ const products = [
         "originalPrice": "₹4,298",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2621"
     },
     {
         "id": "product_22",
@@ -280,11 +228,8 @@ const products = [
         "originalPrice": "₹4,498",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2622"
     },
     {
         "id": "product_23",
@@ -293,11 +238,8 @@ const products = [
         "originalPrice": "₹4,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2623"
     },
     {
         "id": "product_24",
@@ -306,11 +248,8 @@ const products = [
         "originalPrice": "₹4,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2624"
     },
     {
         "id": "product_25",
@@ -319,11 +258,8 @@ const products = [
         "originalPrice": "₹2,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2625"
     },
     {
         "id": "product_26",
@@ -332,11 +268,8 @@ const products = [
         "originalPrice": "₹2,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2626"
     },
     {
         "id": "product_27",
@@ -345,11 +278,8 @@ const products = [
         "originalPrice": "₹3,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2627"
     },
     {
         "id": "product_28",
@@ -358,11 +288,8 @@ const products = [
         "originalPrice": "₹3,398",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2628"
     },
     {
         "id": "product_29",
@@ -371,11 +298,8 @@ const products = [
         "originalPrice": "₹3,598",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2629"
     },
     {
         "id": "product_30",
@@ -384,11 +308,8 @@ const products = [
         "originalPrice": "₹3,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2630"
     },
     {
         "id": "product_31",
@@ -397,11 +318,8 @@ const products = [
         "originalPrice": "₹3,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2631"
     },
     {
         "id": "product_32",
@@ -410,11 +328,8 @@ const products = [
         "originalPrice": "₹4,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2632"
     },
     {
         "id": "product_33",
@@ -423,11 +338,8 @@ const products = [
         "originalPrice": "₹4,398",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2633"
     },
     {
         "id": "product_34",
@@ -436,11 +348,8 @@ const products = [
         "originalPrice": "₹4,598",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2634"
     },
     {
         "id": "product_35",
@@ -449,11 +358,8 @@ const products = [
         "originalPrice": "₹4,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2635"
     },
     {
         "id": "product_36",
@@ -462,11 +368,8 @@ const products = [
         "originalPrice": "₹4,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2636"
     },
     {
         "id": "product_37",
@@ -475,11 +378,8 @@ const products = [
         "originalPrice": "₹2,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2637"
     },
     {
         "id": "product_38",
@@ -488,11 +388,8 @@ const products = [
         "originalPrice": "₹3,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.09 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2638"
     },
     {
         "id": "product_39",
@@ -501,11 +398,8 @@ const products = [
         "originalPrice": "₹3,298",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2639"
     },
     {
         "id": "product_40",
@@ -514,11 +408,8 @@ const products = [
         "originalPrice": "₹3,498",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2640"
     },
     {
         "id": "product_41",
@@ -527,11 +418,8 @@ const products = [
         "originalPrice": "₹3,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2641"
     },
     {
         "id": "product_42",
@@ -540,11 +428,8 @@ const products = [
         "originalPrice": "₹3,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.10 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2642"
     },
     {
         "id": "product_43",
@@ -553,11 +438,8 @@ const products = [
         "originalPrice": "₹4,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2643"
     },
     {
         "id": "product_44",
@@ -566,11 +448,8 @@ const products = [
         "originalPrice": "₹4,298",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2644"
     },
     {
         "id": "product_45",
@@ -579,11 +458,8 @@ const products = [
         "originalPrice": "₹4,498",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2645"
     },
     {
         "id": "product_46",
@@ -592,11 +468,8 @@ const products = [
         "originalPrice": "₹4,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.11 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2646"
     },
     {
         "id": "product_47",
@@ -605,11 +478,8 @@ const products = [
         "originalPrice": "₹4,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2647"
     },
     {
         "id": "product_48",
@@ -618,11 +488,8 @@ const products = [
         "originalPrice": "₹5,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2648"
     },
     {
         "id": "product_49",
@@ -631,11 +498,8 @@ const products = [
         "originalPrice": "₹2,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2649"
     },
     {
         "id": "product_50",
@@ -644,11 +508,8 @@ const products = [
         "originalPrice": "₹3,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.12 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2650"
     },
     {
         "id": "product_51",
@@ -657,11 +518,8 @@ const products = [
         "originalPrice": "₹3,398",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2651"
     },
     {
         "id": "product_52",
@@ -670,11 +528,8 @@ const products = [
         "originalPrice": "₹3,598",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2652"
     },
     {
         "id": "product_53",
@@ -683,11 +538,8 @@ const products = [
         "originalPrice": "₹3,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2653"
     },
     {
         "id": "product_54",
@@ -696,11 +548,8 @@ const products = [
         "originalPrice": "₹3,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.13 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2654"
     },
     {
         "id": "product_55",
@@ -709,11 +558,8 @@ const products = [
         "originalPrice": "₹4,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2655"
     },
     {
         "id": "product_56",
@@ -722,11 +568,8 @@ const products = [
         "originalPrice": "₹4,398",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2656"
     },
     {
         "id": "product_57",
@@ -735,11 +578,8 @@ const products = [
         "originalPrice": "₹4,598",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.14 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2657"
     },
     {
         "id": "product_58",
@@ -748,11 +588,8 @@ const products = [
         "originalPrice": "₹4,798",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2658"
     },
     {
         "id": "product_59",
@@ -761,11 +598,8 @@ const products = [
         "originalPrice": "₹4,998",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2659"
     },
     {
         "id": "product_60",
@@ -774,11 +608,8 @@ const products = [
         "originalPrice": "₹5,198",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2660"
     },
     {
         "id": "product_61",
@@ -787,11 +618,8 @@ const products = [
         "originalPrice": "₹3,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.15 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2661"
     },
     {
         "id": "product_62",
@@ -800,11 +628,8 @@ const products = [
         "originalPrice": "₹3,298",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2662"
     },
     {
         "id": "product_63",
@@ -813,11 +638,8 @@ const products = [
         "originalPrice": "₹3,498",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2663"
     },
     {
         "id": "product_64",
@@ -826,11 +648,8 @@ const products = [
         "originalPrice": "₹3,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2664"
     },
     {
         "id": "product_65",
@@ -839,11 +658,8 @@ const products = [
         "originalPrice": "₹3,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.16 PM (3).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2665"
     },
     {
         "id": "product_66",
@@ -852,11 +668,8 @@ const products = [
         "originalPrice": "₹4,098",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2666"
     },
     {
         "id": "product_67",
@@ -865,11 +678,8 @@ const products = [
         "originalPrice": "₹4,298",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2667"
     },
     {
         "id": "product_68",
@@ -878,11 +688,8 @@ const products = [
         "originalPrice": "₹4,498",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.17 PM (2).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2668"
     },
     {
         "id": "product_69",
@@ -891,11 +698,8 @@ const products = [
         "originalPrice": "₹4,698",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM.jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2669"
     },
     {
         "id": "product_70",
@@ -904,10 +708,7 @@ const products = [
         "originalPrice": "₹4,898",
         "discount": "50% OFF",
         "image": "images/WhatsApp Image 2026-06-09 at 5.28.18 PM (1).jpeg",
-        "videos": [
-            "images/Review/video.mp4",
-            "images/Review/video (1).mp4",
-            "images/Review/video (2).mp4"
-        ]
+        "videos": [],
+        "code": "DMM2670"
     }
 ];

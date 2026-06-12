@@ -37,8 +37,13 @@
 
     <!-- Product Detail Section -->
     <section class="product-detail-section">
-        <div class="product-detail-image-wrapper">
-            <img src="" alt="Product Image" id="product-detail-image" class="product-detail-image">
+        <div class="product-media-slider-container">
+            <div class="product-media-slider" id="product-media-slider">
+                <!-- Slides will be injected here -->
+            </div>
+            <button class="media-arrow media-prev" onclick="scrollMedia(-1)">&#10094;</button>
+            <button class="media-arrow media-next" onclick="scrollMedia(1)">&#10095;</button>
+            <div class="media-dots" id="media-dots"></div>
         </div>
         <div class="product-info">
             <div class="product-title-row">
@@ -48,6 +53,8 @@
                 </button>
             </div>
             
+            <p id="product-code" class="product-code-detail">Code: Loading...</p>
+
             <div class="price-row-detail">
                 <span class="product-price" id="product-price">₹0</span>
                 <span class="original-price" id="product-original-price">₹0</span>
@@ -209,13 +216,87 @@
             if (product) {
                 document.title = `${product.title} - Div Mangal Murtis`;
                 document.getElementById('product-title').innerText = product.title;
+                document.getElementById('product-code').innerText = 'Code: ' + (product.code || '');
                 document.getElementById('product-price').innerText = product.price;
                 document.getElementById('product-original-price').innerText = product.originalPrice;
                 document.getElementById('product-discount').innerText = product.discount;
 
-                const imgElement = document.getElementById('product-detail-image');
-                imgElement.src = product.image;
-                imgElement.alt = product.title;
+                const slider = document.getElementById('product-media-slider');
+                const dotsContainer = document.getElementById('media-dots');
+                
+                if (slider && dotsContainer) {
+                    slider.innerHTML = '';
+                    dotsContainer.innerHTML = '';
+                    
+                    let mediaItems = [];
+                    if (product.images && product.images.length > 0) {
+                        mediaItems = [...product.images];
+                    } else if (product.image) {
+                        mediaItems = [product.image];
+                    }
+                    if (product.videos && product.videos.length > 0) {
+                        mediaItems = [...mediaItems, ...product.videos];
+                    }
+
+                    mediaItems.forEach((src, index) => {
+                        const slide = document.createElement('div');
+                        slide.className = 'media-slide';
+                        
+                        if (src.toLowerCase().endsWith('.mp4')) {
+                            const video = document.createElement('video');
+                            video.src = src;
+                            video.playsInline = true;
+                            video.muted = true;
+                            video.loop = true;
+                            slide.appendChild(video);
+                        } else {
+                            const img = document.createElement('img');
+                            img.src = src;
+                            img.alt = product.title;
+                            slide.appendChild(img);
+                        }
+                        slider.appendChild(slide);
+
+                        const dot = document.createElement('span');
+                        dot.className = 'media-dot' + (index === 0 ? ' active' : '');
+                        dot.onclick = () => {
+                            slider.scrollTo({
+                                left: slide.offsetLeft,
+                                behavior: 'smooth'
+                            });
+                        };
+                        dotsContainer.appendChild(dot);
+                    });
+
+                    // Update dots and videos on scroll
+                    const updateSliderState = () => {
+                        const slideWidth = slider.clientWidth;
+                        const scrollPosition = slider.scrollLeft;
+                        const activeIndex = Math.round(scrollPosition / slideWidth);
+                        
+                        const dots = dotsContainer.querySelectorAll('.media-dot');
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('active', i === activeIndex);
+                        });
+
+                        const slides = slider.querySelectorAll('.media-slide');
+                        slides.forEach((slide, i) => {
+                            const video = slide.querySelector('video');
+                            if (video) {
+                                if (i === activeIndex) {
+                                    video.play().catch(e => console.log('Autoplay blocked:', e));
+                                } else {
+                                    video.pause();
+                                }
+                            }
+                        });
+                    };
+
+                    slider.addEventListener('scroll', updateSliderState);
+                    
+                    // Trigger initially to handle first slide
+                    setTimeout(updateSliderState, 100);
+                }
 
                 const waMessage = `Hello, I would like to book the ${product.title}.`;
                 document.getElementById('whatsapp-btn').href = `https://wa.me/919876543210?text=${encodeURIComponent(waMessage)}`;
@@ -316,6 +397,15 @@
             const firstVideo = slides[0].querySelector('video');
             if (firstVideo) {
                 firstVideo.play().catch(e => console.log('Autoplay blocked:', e));
+            }
+        }
+
+        // Media Slider Scroll Function
+        function scrollMedia(dir) {
+            const slider = document.getElementById('product-media-slider');
+            if (slider) {
+                const slideWidth = slider.clientWidth;
+                slider.scrollBy({ left: dir * slideWidth, behavior: 'smooth' });
             }
         }
     </script>
