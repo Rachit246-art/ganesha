@@ -161,7 +161,7 @@
             </svg>
             <h2>Follow us on Instagram</h2>
             <p>Get exclusive updates and <strong>10% OFF</strong> your first traditional Ganesha idol.</p>
-            <a href="#" class="cta-button insta-btn">Follow @DivMangalMurtis</a>
+            <a href="https://www.instagram.com/divmangalmurtis?igsh=MTRsZGJ5YWRyZ24xeQ==" target="_blank" class="cta-button insta-btn">Follow @DivMangalMurtis</a>
         </div>
     </section>
 
@@ -183,9 +183,9 @@
             </div>
             <div class="footer-col">
                 <h3>Contact Info</h3>
-                <p>📞 +91 98765 43210</p>
-                <p>✉️ info@divmangalmurtis.com</p>
-                <p>📍 Mumbai, Maharashtra, India</p>
+                <p>📞 +91 8792030203</p>
+                <p>✉️ Divmangalmurtis@gmail.com</p>
+                <p>📍 Solapur and Bengaluru, India.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -292,7 +292,7 @@
                 }
 
                 const waMessage = `Hello, I would like to book the ${product.title}.`;
-                document.getElementById('whatsapp-btn').href = `https://wa.me/919876543210?text=${encodeURIComponent(waMessage)}`;
+                document.getElementById('whatsapp-btn').href = `https://wa.me/918792030203?text=${encodeURIComponent(waMessage)}`;
 
                 // Update videos if available
                 if (product.videos && product.videos.length > 0) {
@@ -385,11 +385,51 @@
                     });
                 }
             });
+            // IntersectionObserver to play/pause videos based on visibility
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    const slide = video.closest('.review-slide');
+                    // Play if it's visible and is the active slide, otherwise pause
+                    if (entry.isIntersecting && slide && slide.classList.contains('active')) {
+                        video.play().catch(e => console.log('Autoplay blocked:', e));
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            slides.forEach(slide => {
+                const video = slide.querySelector('video');
+                if (video) {
+                    videoObserver.observe(video);
+                }
+            });
+        }
+
+        // Touch swipe support for reviews
+        const reviewCarousel = document.getElementById('review-carousel');
+        if (reviewCarousel) {
+            let touchStartX = 0;
+            let touchEndX = 0;
             
-            // Ensure first video plays on load
-            const firstVideo = slides[0].querySelector('video');
-            if (firstVideo) {
-                firstVideo.play().catch(e => console.log('Autoplay blocked:', e));
+            reviewCarousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            reviewCarousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    changeReview(1); // Swiped left -> next
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    changeReview(-1); // Swiped right -> prev
+                }
             }
         }
 

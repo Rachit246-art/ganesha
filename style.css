@@ -95,9 +95,6 @@ h1, h2, h3, .cta-button {
     padding: 0.2rem 1rem;
     text-align: center;
     border-bottom: 3px double var(--color-gold);
-    position: sticky;
-    top: 40px; /* Below the announcement bar */
-    z-index: 999;
 }
 
 .logo-placeholder {
@@ -120,7 +117,7 @@ h1, h2, h3, .cta-button {
 .hero {
     position: relative;
     text-align: center;
-    padding: 1.5rem;
+    padding: 0;
     background-color: transparent;
 }
 
@@ -128,12 +125,12 @@ h1, h2, h3, .cta-button {
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     aspect-ratio: 21 / 9;
-    border-radius: 20px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: none;
 }
 
 .slide {
@@ -1071,11 +1068,11 @@ h1, h2, h3, .cta-button {
 @media (max-width: 768px) {
     /* Hero: full screen, centered content */
     .hero {
-        padding: 1rem;
+        padding: 0;
     }
     .slider-container {
         aspect-ratio: 16 / 10;
-        border-radius: 15px;
+        border-radius: 0;
     }
     .petal {
         display: none;
@@ -1279,4 +1276,40 @@ h1, h2, h3, .cta-button {
 .back-btn svg {
     width: 24px;
     height: 24px;
+}
+
+/* Swiping Reviews Grid for inner pages */
+.reviews-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    scrollbar-width: none;
+}
+.reviews-grid::-webkit-scrollbar {
+    display: none;
+}
+.review-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        overflow-x: visible;
+        padding: 0;
+    }
+    .review-card {
+        flex: none;
+        scroll-snap-align: none;
+    }
 }

@@ -61,7 +61,7 @@ if (timerElements.length > 0) {
 function initFloatingWhatsApp() {
     if (document.querySelector('.floating-whatsapp')) return;
     const waFloat = document.createElement('a');
-    waFloat.href = 'https://wa.me/919876543210?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Div%20Mangal%20Murtis.';
+    waFloat.href = 'https://wa.me/918792030203?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Div%20Mangal%20Murtis.';
     waFloat.className = 'floating-whatsapp';
     waFloat.target = '_blank';
     waFloat.setAttribute('aria-label', 'Contact us on WhatsApp');
